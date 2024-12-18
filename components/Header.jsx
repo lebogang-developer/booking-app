@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '@/assets/images/logo.svg';
+import { FaUser, FaSignInAlt, FaSignOutAlt, FaBuilding } from 'react-icons/fa';
 
 const Header = () => {
   return (
     <header className='bg-gray-100'>
       <nav className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex h-16 items-center justify-between'>
-          Link
           <div className='flex items-center'>
             <Link href='/'>
               <Image
@@ -49,22 +49,22 @@ const Header = () => {
                 href='login.html'
                 className='mr-3 text-gray-800 hover:text-gray-600'
               >
-                <i className='fa fa-sign-in'></i> Login
+                <FaSignInAlt className='inline mr-1' /> Login
               </Link>
               <Link
                 href='register.html'
                 className='mr-3 text-gray-800 hover:text-gray-600'
               >
-                <i className='fa fa-user'></i> Register
+                <FaUser className='inline mr-1' /> Register
               </Link>
               <Link href='my-rooms.html'>
-                <i className='fa fa-building'></i> My Rooms
+                <FaBuilding className='inline mr-1' /> My Rooms
               </Link>
               <Link
                 href='login.html'
                 className='mx-3 text-gray-800 hover:text-gray-600'
               >
-                <i className='fa fa-sign-out'></i> Sign Out
+                <FaSignOutAlt className='inline mr-1' /> Sign Out
               </Link>
             </div>
           </div>
